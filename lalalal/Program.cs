@@ -130,12 +130,15 @@ namespace lalalal
 
         static ConsoleColor GetResultColor(int result)
         {
-            return result switch
+            switch (result)
             {
-                1 => ConsoleColor.Red,
-                6 => ConsoleColor.Yellow,
-                _ => ConsoleColor.White
-            };
+                case 1:
+                    return ConsoleColor.Red;
+                case 6:
+                    return ConsoleColor.Yellow;
+                default:
+                    return ConsoleColor.White;
+            }
         }
     }
 }
